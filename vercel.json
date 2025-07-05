@@ -3,20 +3,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_GEOAPIFY_API_KEY": "49f54774eecb471b98f1afec04a2df6a"
-  }
-} 
+    { "src": "/(.*)", "dest": "/landing.html" }
+  ]
+}
